@@ -1,5 +1,6 @@
 'use client'
 
+import { API_BASE } from './api'
 import { useEffect, useMemo, useState, useTransition } from 'react'
 import { Icon } from './Icon'
 import { categories, currency, type CategoryKey, type ExpenseEntry } from './types'
@@ -38,7 +39,7 @@ export function TransactionsView({ initialEntries }: { initialEntries: ExpenseEn
     if (!window.confirm('Delete this expense entry?')) return
     startTransition(async () => {
       try {
-        const res = await fetch(`http://localhost:8080/api/spendwise/expenses/${id}`, {
+        const res = await fetch(`${API_BASE}/api/spendwise/expenses/${id}`, {
           method: 'DELETE',
         })
         if (!res.ok) throw new Error('Failed to delete')

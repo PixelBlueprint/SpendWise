@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { API_BASE } from '@/components/spendwise/api'
 import { AuthScreen, type SpendWiseUser } from '@/components/spendwise/AuthScreen'
 import { BudgetsView } from '@/components/spendwise/BudgetsView'
 import type { ExpenseEntry, MonthlyBudget } from '@/components/spendwise/types'
@@ -25,7 +26,7 @@ export default function BudgetsPage() {
 
   useEffect(() => {
     if (!user) return
-    fetch(`http://localhost:8080/api/spendwise/dashboard?userId=${user.id}`)
+    fetch(`${API_BASE}/api/spendwise/dashboard?userId=${user.id}`)
       .then((res) => res.json())
       .then((data) => {
         setEntries(

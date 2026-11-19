@@ -1,5 +1,6 @@
 'use client'
 
+import { API_BASE } from './api'
 import { useEffect, useMemo, useState, useTransition } from 'react'
 import { AiInsightCard, type LiveAiInsights } from './AiInsightCard'
 import type { SpendWiseUser } from './AuthScreen'
@@ -147,7 +148,7 @@ export function OverviewDashboard({
     setMessage('')
     startTransition(async () => {
       try {
-        const res = await fetch('http://localhost:8080/api/spendwise/expenses/day', {
+        const res = await fetch(`${API_BASE}/api/spendwise/expenses/day`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

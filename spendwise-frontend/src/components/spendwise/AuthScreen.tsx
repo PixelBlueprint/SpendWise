@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { API_BASE } from './api'
 
 export interface SpendWiseUser {
   id: number
@@ -12,7 +13,7 @@ interface AuthScreenProps {
   onAuthenticated: (user: SpendWiseUser) => void
 }
 
-const AUTH_API = 'http://localhost:8080/api/auth'
+const AUTH_API = `${API_BASE}/api/auth`
 
 export function AuthScreen({ onAuthenticated }: AuthScreenProps) {
   const [mode, setMode] = useState<'login' | 'register'>('login')
@@ -46,7 +47,7 @@ export function AuthScreen({ onAuthenticated }: AuthScreenProps) {
       localStorage.setItem('spendwise_user', JSON.stringify(data))
       onAuthenticated(data)
     } catch {
-      setError('Cannot reach SpendWise backend. Make sure Spring Boot is running on port 8080.')
+      setError('Cannot reach SpendWise backend. Please try again in a moment.')
     } finally {
       setLoading(false)
     }

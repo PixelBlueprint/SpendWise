@@ -1,5 +1,6 @@
 'use client'
 
+import { API_BASE } from './api'
 import { useRouter } from 'next/navigation'
 import { useEffect, useMemo, useState, useTransition } from 'react'
 import type { SpendWiseUser } from './AuthScreen'
@@ -126,7 +127,7 @@ export function BudgetsView({
           other: draft.other,
         }
         const res = await fetch(
-          `http://localhost:8080/api/spendwise/budgets/${monthKey}?userId=${user.id}`,
+          `${API_BASE}/api/spendwise/budgets/${monthKey}?userId=${user.id}`,
           {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
