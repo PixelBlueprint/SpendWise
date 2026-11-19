@@ -1,7 +1,6 @@
 import path from 'path'
 import { buildConfig } from 'payload'
 import { postgresAdapter } from '@payloadcms/db-postgres'
-import { mcpPlugin } from '@payloadcms/plugin-mcp'
 import { en as adminLanguage } from '@payloadcms/translations/languages/en'
 import { fileURLToPath } from 'url'
 import { Admins } from './collections/Admins'
@@ -48,5 +47,5 @@ export default buildConfig({
     fallback: true,
     defaultLocale: 'en',
   },
-  plugins: [mcpPlugin({})],
+  plugins: [],
 })
