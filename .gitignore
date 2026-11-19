@@ -1,0 +1,27 @@
+# Next.js / Frontend
+SpendWise Finance Dashboard/node_modules/
+SpendWise Finance Dashboard/.next/
+SpendWise Finance Dashboard/out/
+SpendWise Finance Dashboard/dist/
+SpendWise Finance Dashboard/.cache/
+SpendWise Finance Dashboard/.env*
+SpendWise Finance Dashboard/next-env.d.ts
+SpendWise Finance Dashboard/*.tsbuildinfo
+SpendWise Finance Dashboard/*.log
+SpendWise Finance Dashboard/.claude-replay.*
+SpendWise Finance Dashboard/.figma/
+SpendWise Finance Dashboard/.tmp-*
+SpendWise Finance Dashboard/.plugins/
+SpendWise Finance Dashboard/.opencode-skills/
+
+# Spring Boot / Backend
+spendwise-backend/target/
+spendwise-backend/HELP.md
+spendwise-backend/.mvn/wrapper/maven-wrapper.jar
+spendwise-backend/.env
+spendwise-backend/*.log
+spendwise-backend/.vscode/
+spendwise-backend/.idea/
+spendwise-backend/*.iml
+
+*.exe
