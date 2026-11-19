@@ -4,15 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "dev": "next dev --port 3000",
-  "build": "payload build",
-  "start": "next start",
-  "format": "oxfmt",
-  "generate:importmap": "payload generate:importmap",
-  "generate:types": "payload generate:types",
-  "payload": "payload"
-},
+    "dev": "next dev --port 3000",
+    "build": "payload build",
+    "start": "next start",
+    "format": "oxfmt",
+    "generate:importmap": "payload generate:importmap",
+    "generate:types": "payload generate:types",
+    "payload": "payload"
+  },
   "dependencies": {
+    "@payloadcms/db-postgres": "^4.0.0-beta.8",
     "@payloadcms/figma": "1.0.0-beta.1",
     "@payloadcms/next": "4.0.0-beta.8",
     "@payloadcms/plugin-cloud-storage": "4.0.0-beta.8",
